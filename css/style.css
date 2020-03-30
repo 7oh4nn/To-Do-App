@@ -28,7 +28,7 @@ header {
   position: relative;
   text-align: center;
   height: 70vh;
-  max-width: 1600px;
+  max-width: 1500px;
   width: 100vw;
   background-color: #20273a;
   padding: 50px 0;
@@ -53,8 +53,9 @@ header p {
 
 main {
   display: grid;
+  color: #20273a;
   grid-template-columns: auto;
-  max-width: 1600px;
+  max-width: 1500px;
   width: 100vw;
   height: 100vh;
   padding: 0;
@@ -85,15 +86,20 @@ section button a {
   text-decoration: none;
   opacity: 0.5;
 }
-section ul {
+section table {
   padding: 0;
   font-size: 30px;
   list-style: none;
 }
-section ul li {
+section table td, section table th {
   background-color: white;
+  text-align: center;
   padding: 10px 50px;
   margin: 10px 0;
   border-radius: 20px;
   box-shadow: inset 10px 10px 15px rgba(200, 200, 200, 0.6);
+}
+section table td:hover, section table th:hover {
+  cursor: pointer;
+  box-shadow: 10px 10px 15px rgba(200, 200, 200, 0.6), inset 5px 5px 15px rgba(200, 200, 200, 0.6);
 }

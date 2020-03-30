@@ -17,13 +17,55 @@
     </header>
     <main>
       <section>
-        <ul>
-          <li>Mehl</li>
-          <li>Klopapier</li>
-          <li>Äpfel</li>
-          <li>Eier</li>
-          <li>Zucker</li>
-        </ul>
+        <table>
+          <tr>
+            <th>Aufgabe</th>
+            <th>Enddatum</th>
+            <th>Status</th>
+          </tr>
+          <tr>
+            <td>irgendeine Aufgabe</td>
+            <td>01 August 2020</td>
+            <td>ausstehend</td>
+          </tr>
+          <tr>
+            <td>eine lustige Aufgabe</td>
+            <td>13 Mai 2020</td>
+            <td>begonnen</td>
+          </tr>
+        </table>
+      </section>
+      <section>
+        <form action="">
+          <label for="Aufgabe">Aufgabe</label>
+          <input id="Aufgabe" placeholder="Aufgabe">
+            <label for="Tag">Enddatum</label>
+            <select id="Tag" name="Tag">
+             <option value="Tag" selected disabled>Tag</option>
+             <option value="01">01</option>
+             <option value="02">02</option>
+             <option value="03">03</option>
+           </select>
+           <select id="Monat" name="Monat">
+             <option value="Monat" selected disabled>Monat</option>
+             <option value="Jan">Januar</option>
+             <option value="Feb">Februar</option>
+             <option value="Mar">März</option>
+           </select>
+           <select id="Jahr" name="Jahr">
+             <option value="Jahr" selected disabled>Jahr</option>
+             <option value="2020">2020</option>
+             <option value="2021">2021</option>
+             <option value="2022">2022</option>
+           </select>
+           <label for="status">Status</label>
+           <select id="status" name="status">
+             <option value="status" selected disabled>Status</option>
+             <option value="erledigt">erledigt</option>
+             <option value="begonnen">begonnen</option>
+             <option value="ausstehend">ausstehend</option>
+           </select>
+         </form>
       </section>
       <section>
         <button title="add new item"><a href="#" class="button_plus"><i class="fas fa-plus fa-2x"></i></a></button>
