@@ -1,0 +1,14 @@
+header{
+  height: 60vh;
+  background-color: $darkblue;
+  color: white;
+  padding: 10% 10px;
+  text-align: center;
+  box-shadow: inset 0px -25px 15px -10px $darkblue_shadow;
+  h1{
+    font-size: 4em;
+  }
+  span{
+    font-size: 1.5em;
+  }
+}
