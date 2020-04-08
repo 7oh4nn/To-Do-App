@@ -16,3 +16,8 @@ a{
   color: #333;
   text-decoration: none;
 }
+
+button:active{
+  outline: none;
+  filter: brightness(90%);
+}
