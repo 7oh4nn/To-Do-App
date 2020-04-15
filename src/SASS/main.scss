@@ -1,8 +1,80 @@
 main{
   section{
+    text-align: center;
     max-width: 40rem;
     padding: 10px;
     margin: 10px auto;
+
+    h2{
+      text-transform: uppercase;
+      font-size: 30px;
+      color: $darkblue;
+    }
+    p{
+      text-transform: uppercase;
+      font-size: 16px;
+      text-align: right;
+      color: $darkblue;
+    }
+
+//     INPUTFIELD
+  form{
+    display: block;
+    text-align: center;
+  }
+  label{
+    padding: 1rem 0;
+    text-align: center;
+    grid-column: 2;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  input{
+    position: relative;
+    font-size: 18px;
+    height: 50px;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    border: none;
+    display: grid;
+    margin: 10px 0;
+    padding: 10px;
+    overflow: hidden;
+    box-shadow: inset 10px 5px 15px -5px $lightgreyShadow;
+    &:focus{
+      background-color: $darkblue;
+      color: white;
+      box-shadow:
+        5px 5px 20px -5px $lightgreyShadow,
+        -10px -5px 20px -5px $lightgreyShadow;
+    }
+  }
+
+  .submit{
+    cursor: pointer;
+    padding: 5px;
+    width: 60px;
+    color: white;
+    font-weight: bold;
+    background-color: $btnNoHover;
+    border: none;
+    display: block;
+    transition: width .2s ease-in-out;
+    svg{
+      margin: 5px auto;
+    }
+    &:hover, &:focus{
+      width: 50%;
+      background-color: $check;
+    }
+  }
+
+
+
+
+//     TO DO ITEMS
     ul{
       list-style: none;
     }
@@ -15,18 +87,15 @@ main{
       margin: 10px 0;
       overflow: hidden;
       box-shadow: inset 10px 5px 15px -5px $lightgreyShadow;
-      h2, p{
+      h3{
         padding: 1rem 0;
         text-align: center;
         grid-column: 2;
       }
-      h2{
+      h3{
         font-size: 1.2em;
         text-transform: uppercase;
         letter-spacing: 2px;
-      }
-      p{
-        font-size: 1em;
       }
       .checkBtn{
         cursor: pointer;
@@ -81,6 +150,30 @@ main{
             width: 100%;
             transition: width .2s ease-in-out;
           }
+        }
+      }
+    }
+    .checkedItem{
+      color: $btnNoHover;
+      background-color: white;
+      &:hover{
+        background-color: white;
+        box-shadow: inset 10px 5px 15px -5px $lightgreyShadow;
+        color: $darkblue;
+        .checkBtn{
+          &:hover{
+            width: 150%;
+          }
+        }
+      }
+      .checkBtn{
+        width: 150%;
+        background-color: $check;
+        border: none;
+        transform: translateX(0);
+        opacity: 1;
+        &:hover{
+          width: 150%;
         }
       }
     }
